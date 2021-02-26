@@ -56,8 +56,8 @@ module ReportPortal
             require_relative 'report'
             @report ||= ReportPortal::Cucumber::Report.new
         else
-            require_relative 'messagesreport'
-            @report ||= ReportPortal::Cucumber::MessagesReport.new(@ast_lookup)
+            require_relative 'custom_report'
+            @report ||= ReportPortal::Cucumber::CustomReport.new(@ast_lookup)
         end
       end
 
